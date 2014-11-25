@@ -3,7 +3,7 @@
   angular.module('Musicians')
     .controller('MusiciansListController', ['$scope', 'FIREBASE_URI', '$firebase',
       function($scope, FIREBASE_URI, $firebase){
-        console.log("hello");
+
 
         var musiciansRef = new Firebase(FIREBASE_URI + 'musicians');
 
