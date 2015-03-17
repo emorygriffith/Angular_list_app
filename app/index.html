@@ -24,19 +24,21 @@
   <body ng-app="Musicians">
 
     <div class="hero-unit">
-      <h3>(Firebase and Angular 2)</h3>
+      <h3>Musician List</h3>
       <div class="container" ng-controller="MusiciansListController">
         <h4>{{ title }}</h4>
         <ul>
-          <li ng-repeat="musician in musicians">{{ musician.name }} lives in {{ musician.location }} and plays {{ musician.instrument }} <button ng-click="deleteMusician(musician)">X</button></li>
+          <li ng-repeat="musician in musicians">{{ musician.name }} | {{ musician.location }} | {{ musician.instrument }} <button ng-click="deleteMusician(musician)">X</button></li>
         </ul>
 
         <form ng-submit="addMusician(musician)" id="addForm">
           <input type="text" ng-model="musician.name" placeholder="Name"/>
           <input type="text" ng-model="musician.instrument" placeholder="Instrument"/>
           <input type="text" ng-model="musician.location" placeholder="Location"/>
+          <input type="email" ng-model="musician.email" placeholder="Email"/>
           <button>Add Musician</button>
         </form>
+
 
 
       </div>
